@@ -14,14 +14,14 @@ install:  ## install library
 # LINTS #
 #########
 lint:  ## run static analysis with flake8
-	python -m black --check PyTorch-NLP-chatbot setup.py
-	python -m flake8 PyTorch-NLP-chatbot setup.py
+	python -m black --check chatbot setup.py
+	python -m flake8 chatbot setup.py
 
 # Alias
 lints: lint
 
 format:  ## run autoformatting with black
-	python -m black PyTorch-NLP-chatbot/ setup.py
+	python -m black chatbot/ setup.py
 
 # alias
 fix: format
@@ -33,16 +33,16 @@ check:  ## check assets for packaging
 checks: check
 
 annotate:  ## run type checking
-	python -m mypy ./PyTorch-NLP-chatbot
+	python -m mypy ./hatbot
 
 #########
 # TESTS #
 #########
 test: ## clean and run unit tests
-	python -m pytest -v PyTorch-NLP-chatbot/tests
+	python -m pytest -v chatbot/tests
 
 coverage:  ## clean and run unit tests with coverage
-	python -m pytest -v PyTorch-NLP-chatbot/tests --cov=PyTorch-NLP-chatbot --cov-branch --cov-fail-under=75 --cov-report term-missing
+	python -m pytest -v chatbot/tests --cov=chatbot --cov-branch --cov-fail-under=75 --cov-report term-missing
 
 # Alias
 tests: test
