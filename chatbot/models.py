@@ -1,10 +1,7 @@
 # Authors: Koro_Is_Coding
 # License: Apache v2.0
 
-import sys
 import requests
-import re
-import operator
 from string import Template
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -49,7 +46,6 @@ class SearchEngineStruct:
     def kk(self):
         a = input("ssss")
         return a
-
 
     def choose_relevant(self):
         """
