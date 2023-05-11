@@ -3,7 +3,6 @@
 
 import requests
 from string import Template
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 class SearchException(Exception):
