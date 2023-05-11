@@ -2,10 +2,11 @@ graft chatbot
 
 include LICENSE
 include README.md
-
+include CONTRIBUTING.md
 include .bumpversion.cfg
 include pyproject.toml
 include Makefile
+include python_junit.xml
 
 prune .github
 exclude .gitignore
