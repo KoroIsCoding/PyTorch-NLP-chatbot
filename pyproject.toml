@@ -7,8 +7,8 @@ requires = [
 build-backend="setuptools.build_meta"
 
 [project]
-name = "example-project-python"
-authors = [{name = "Your Name", email = "Your_Email@gmail.com"}]
+name = "Pytorch-nlp-Chatbot"
+authors = [{name = "Koro", email = "yh3575@columbia.edu"}]
 description="An example python project"
 readme = "README.md"
 version = "0.1.0"
@@ -33,7 +33,7 @@ classifiers = [
 file = "LICENSE"
 
 [project.urls]
-repository = "https://github.com/columbiaoss/example-project-python"
+repository = "https://github.com/KoroIsCoding/PyTorch-NLP-chatbot"
 
 [project.optional-dependencies]
 develop = [
@@ -64,10 +64,10 @@ ignore = [
 ignore = ['E203', 'W503']
 max-line-length=120
 exclude=[
-    'example_project_python/tests/*'
+    'PyTorch-NLP-chatbot/tests/*'
 ]
 per-file-ignores= [
-    'example_project_python/__init__.py:F401, F403'
+    'PyTorch-NLP-chatbot/__init__.py:F401, F403'
 ]
 
 
