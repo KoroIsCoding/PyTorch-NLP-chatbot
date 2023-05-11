@@ -33,7 +33,7 @@ check:  ## check assets for packaging
 checks: check
 
 annotate:  ## run type checking
-	python -m mypy ./hatbot
+	python -m mypy ./chatbot
 
 #########
 # TESTS #
