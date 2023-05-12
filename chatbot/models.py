@@ -3,10 +3,23 @@
 
 import requests
 from string import Template
+from sklearn.feature_extraction.text import TfidfVectorizer
+import re
+import operator
 
 
 class SearchException(Exception):
     print("no enough results")
+
+def cal_tfidf(results):
+        words = []
+        for result in results:
+            words.extend(re.sub("[^\w]", " ", result["title"]).split())
+            words.extend(re.sub("[^\w]", " ", result["snippet"]).split())
+
+        tv = TfidfVectorizer()
+        tv_fit = tv.fit_transform(words)
+        return dict(zip(tv.get_feature_names_out(), tv.idf_))
 
 
 class SearchEngineStruct:
@@ -42,9 +55,6 @@ class SearchEngineStruct:
             except KeyError:
                 raise SearchException
 
-    def kk(self):
-        a = input("ssss")
-        return a
 
     def choose_relevant(self):
         """
@@ -82,3 +92,29 @@ class SearchEngineStruct:
                 print("NOT RELEVANT")
         accuracy = count / float(10)
         return accuracy
+    
+    
+    def add_and_reorder_words(self):
+        query_old = self.query
+        # Calculate TF-IDF scores for words in relevant and irrelevant results
+        relevant_tfidf = cal_tfidf(self.relevant)
+        irrelevant_tfidf = cal_tfidf(self.irrelevant)
+        # Find words that are unique to relevant results
+        unique_words = {key: value for key, value in relevant_tfidf.items() if key not in irrelevant_tfidf}
+        # Sort unique words by their TF-IDF scores
+        unique_words_sorted = sorted(unique_words.items(), key=operator.itemgetter(1))
+        # Add the top two new words different from the original query
+        count = 0
+        modified_query = []
+        words_old = query_old.split()
+        for key in unique_words_sorted:
+            if key[0] in words_old:
+                modified_query.append(key[0])
+                words_old.remove(key[0])
+            elif count < 2 and key[0] not in query_old:
+                modified_query.append(key[0])
+                count += 1
+        # Add the remaining words from the original query
+        for word in words_old:
+            modified_query.append(word)
+        self.query = modified_query
