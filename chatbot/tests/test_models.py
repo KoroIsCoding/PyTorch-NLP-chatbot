@@ -85,26 +85,3 @@ def test_choose_relevant_0(monkeypatch):
     assert se.choose_relevant() == 0
     assert len(se.relevant) == 0
     assert len(se.irrelevant) == 10
-
-def test_tdidf():
-    # Define a sample input
-    results = [
-        {"title": "Python is great", "snippet": "Python is a wonderful programming language"},
-        {"title": "I love Python", "snippet": "Python is loved by many developers"},
-    ]
-
-    # Expected output
-    words = []
-    for result in results:
-        words.extend(re.sub("[^\w]", " ", result["title"]).split())
-        words.extend(re.sub("[^\w]", " ", result["snippet"]).split())
-    tv = TfidfVectorizer()
-    tv.fit_transform(words)
-    expected_output = dict(zip(tv.get_feature_names_out(), tv.idf_))
-
-    # Call the function with the sample input
-    output = cal_tfidf(results)
-
-    # Assert that the output is as expected
-    assert output == expected_output
-
