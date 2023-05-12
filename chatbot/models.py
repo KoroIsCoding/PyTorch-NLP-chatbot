@@ -11,7 +11,6 @@ import operator
 class SearchException(Exception):
     print("no enough results")
 
-
 def cal_tfidf(results):
     words = []
     for result in results:
@@ -124,4 +123,4 @@ class SearchEngineStruct:
         # Add the remaining words from the original query
         for word in words_old:
             modified_query.append(word)
-        self.query = modified_query
+            self.query = modified_query
