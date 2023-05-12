@@ -1,12 +1,13 @@
 # Authors: Koro_Is_Coding
 # License: Apache v2.0
-from io import StringIO
 
 # standard libraries
 
 
 # external libraries
 import pytest
+from io import StringIO
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 # module to be tested
 from chatbot import SearchEngineStruct
