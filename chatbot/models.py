@@ -11,15 +11,16 @@ import operator
 class SearchException(Exception):
     print("no enough results")
 
-def cal_tfidf(results):
-        words = []
-        for result in results:
-            words.extend(re.sub("[^\w]", " ", result["title"]).split())
-            words.extend(re.sub("[^\w]", " ", result["snippet"]).split())
 
-        tv = TfidfVectorizer()
-        tv_fit = tv.fit_transform(words)
-        return dict(zip(tv.get_feature_names_out(), tv.idf_))
+def cal_tfidf(results):
+    words = []
+    for result in results:
+        words.extend(re.sub("[^\w]", " ", result["title"]).split())
+        words.extend(re.sub("[^\w]", " ", result["snippet"]).split())
+
+    tv = TfidfVectorizer()
+    tv_fit = tv.fit_transform(words)
+    return dict(zip(tv.get_feature_names_out(), tv.idf_))
 
 
 class SearchEngineStruct:
@@ -54,7 +55,6 @@ class SearchEngineStruct:
                     self.top_result = response.json()["items"]
             except KeyError:
                 raise SearchException
-
 
     def choose_relevant(self):
         """
@@ -92,8 +92,7 @@ class SearchEngineStruct:
                 print("NOT RELEVANT")
         accuracy = count / float(10)
         return accuracy
-    
-    
+
     def add_and_reorder_words(self):
         query_old = self.query
         # Calculate TF-IDF scores for words in relevant and irrelevant results
