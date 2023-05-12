@@ -11,6 +11,7 @@ import operator
 class SearchException(Exception):
     print("no enough results")
 
+
 def cal_tfidf(results):
     words = []
     for result in results:
