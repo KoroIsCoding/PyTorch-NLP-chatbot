@@ -12,6 +12,7 @@ jobs:
         run: |
           pip install sphinx sphinx_rtd_theme
           pip install recommonmark
+          pip install chatbot
       - name: Sphinx build
         run: |
           sphinx-build doc _build
