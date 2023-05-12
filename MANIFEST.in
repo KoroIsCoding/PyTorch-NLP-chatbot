@@ -8,7 +8,6 @@ include pyproject.toml
 include Makefile
 include python_junit.xml
 include docs
-include images
 
 prune .github
 exclude .gitignore

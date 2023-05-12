@@ -4,10 +4,10 @@ Examples
 * * cal_tfidf(results) --> Returns a dictionary with words as keys and their corresponding TF-IDF scores as values
     Input is the document that we have classifed, the output can be used for further query or words generations.
 
-.. image:: ../../images/input_tfidf.png
+.. image:: ../images/input_tfidf.png
   :width: 600
 
-.. image:: ../../images/output_tfidf.png
+.. image:: ../images/output_tfidf.png
   :width: 400
   :height: 600
 
@@ -18,10 +18,10 @@ Examples
     The output will be the top 10 result for the search result of query = self.query.
     The format of outout is in json, so you can easily use it for futher purpose.
 
-.. image:: ../../images/input_get_top_result.png
+.. image:: ../images/input_get_top_result.png
   :width: 600
 
-.. image:: ../../images/output_get_top_result.png
+.. image:: ../images/output_get_top_result.png
   :width: 600
   :height: 100
 
@@ -29,7 +29,7 @@ Examples
     so we collect their feedback for further use.
 
 
-.. image:: ../../images/output_choose.png
+.. image:: ../images/output_choose.png
   :width: 600
   :height: 200
 
