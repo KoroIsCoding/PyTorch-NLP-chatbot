@@ -19,18 +19,22 @@ def cal_tfidf(results):
         words.extend(re.sub("[^\w]", " ", result["snippet"]).split())
 
     tv = TfidfVectorizer()
-    tv_fit = tv.fit_transform(words)
+    tv.fit_transform(words)
     return dict(zip(tv.get_feature_names_out(), tv.idf_))
 
 
 class SearchEngineStruct:
-    def __init__(self, google_api_key='AIzaSyAGHYwrgMmAHlFwM-GmS2anQ7xWu7qcIjA', google_engine_key='7a8bd65adc0b760d8'):
+    def __init__(
+        self,
+        google_api_key="AIzaSyAGHYwrgMmAHlFwM-GmS2anQ7xWu7qcIjA",
+        google_engine_key="7a8bd65adc0b760d8",
+    ):
         self.google_api_key = google_api_key
         self.google_engine_key = google_engine_key
         self.top_result = list()
         self.relevant = list()
         self.irrelevant = list()
-        self.query = ''
+        self.query = ""
 
     def get_top_result(self):
         return list(self.top_result)
@@ -42,8 +46,14 @@ class SearchEngineStruct:
         return self.query
 
     def call_google_custom_search_api(self):
-        URL = Template("https://www.googleapis.com/customsearch/v1?key=$client_key&cx=$engine_key&q=$query")
-        url = URL.substitute(client_key=self.google_api_key, engine_key=self.google_engine_key, query=self.query)
+        URL = Template(
+            "https://www.googleapis.com/customsearch/v1?key=$client_key&cx=$engine_key&q=$query"
+        )
+        url = URL.substitute(
+            client_key=self.google_api_key,
+            engine_key=self.google_engine_key,
+            query=self.query,
+        )
         response = requests.get(url)
         if response is None:
             raise SearchException
@@ -99,7 +109,11 @@ class SearchEngineStruct:
         relevant_tfidf = cal_tfidf(self.relevant)
         irrelevant_tfidf = cal_tfidf(self.irrelevant)
         # Find words that are unique to relevant results
-        unique_words = {key: value for key, value in relevant_tfidf.items() if key not in irrelevant_tfidf}
+        unique_words = {
+            key: value
+            for key, value in relevant_tfidf.items()
+            if key not in irrelevant_tfidf
+        }
         # Sort unique words by their TF-IDF scores
         unique_words_sorted = sorted(unique_words.items(), key=operator.itemgetter(1))
         # Add the top two new words different from the original query
