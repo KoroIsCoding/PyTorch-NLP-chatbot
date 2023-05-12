@@ -46,9 +46,7 @@ class SearchEngineStruct:
         return self.query
 
     def call_google_custom_search_api(self):
-        URL = Template(
-            "https://www.googleapis.com/customsearch/v1?key=$client_key&cx=$engine_key&q=$query"
-        )
+        URL = Template("https://www.googleapis.com/customsearch/v1?key=$client_key&cx=$engine_key&q=$query")
         url = URL.substitute(
             client_key=self.google_api_key,
             engine_key=self.google_engine_key,
@@ -109,11 +107,7 @@ class SearchEngineStruct:
         relevant_tfidf = cal_tfidf(self.relevant)
         irrelevant_tfidf = cal_tfidf(self.irrelevant)
         # Find words that are unique to relevant results
-        unique_words = {
-            key: value
-            for key, value in relevant_tfidf.items()
-            if key not in irrelevant_tfidf
-        }
+        unique_words = {key: value for key, value in relevant_tfidf.items() if key not in irrelevant_tfidf}
         # Sort unique words by their TF-IDF scores
         unique_words_sorted = sorted(unique_words.items(), key=operator.itemgetter(1))
         # Add the top two new words different from the original query
