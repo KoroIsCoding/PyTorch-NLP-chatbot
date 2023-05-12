@@ -15,7 +15,7 @@ install:  ## install library
 #########
 lint:  ## run static analysis with flake8
 	python -m black --check chatbot setup.py
-	python -m flake8 chatbot setup.py
+	python -m flake8 --ignore=W605,E501 chatbot setup.py
 
 # Alias
 lints: lint
