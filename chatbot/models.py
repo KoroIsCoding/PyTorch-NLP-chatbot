@@ -3,7 +3,6 @@
 
 import requests
 from string import Template
-import sklearn
 from sklearn.feature_extraction.text import TfidfVectorizer
 import re
 import operator
