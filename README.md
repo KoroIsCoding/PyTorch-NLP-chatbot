@@ -11,7 +11,7 @@ NLP and its uses in creating an intelligent responsive chatbot to interact with 
 [![codecov](https://codecov.io/gh/KoroIsCoding/PyTorch-NLP-chatbot/branch/main/graph/badge.svg?token=Y6UI9PLM4A)](https://codecov.io/gh/KoroIsCoding/PyTorch-NLP-chatbot)
 
 
-
+[![Docs](https://github.com/KoroIsCoding/PyTorch-NLP-chatbot/actions/workflows/documentation.yaml/badge.svg)](https://koroiscoding.github.io/PyTorch-NLP-chatbot/)
 
 ## Overview
 `PyTorch-NLP-chatbot` is a Python library for user to easily build their own chatbot based on their interest and focus.
