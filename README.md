@@ -14,43 +14,42 @@ NLP and its uses in creating an intelligent responsive chatbot to interact with 
 [![Docs](https://github.com/KoroIsCoding/PyTorch-NLP-chatbot/actions/workflows/documentation.yaml/badge.svg)](https://koroiscoding.github.io/PyTorch-NLP-chatbot/)
 
 ## Overview
-`PyTorch-NLP-chatbot` is a Python library for user to easily build their own chatbot based on their interest and focus.
+`Python-Search-Engine` is a Python library designed to facilitate custom searches using the Google Search API. It features a user-friendly interface for querying, parsing, and analyzing search results. It also provides a mechanism to rank search results based on their relevance, calculated using TF-IDF scores.
 
-Users can create chatbot with different fields and improve the accuracy by NLP algorithm.
-
+Users can tailor their search queries, evaluate the relevance of search results, and refine their queries based on relevance feedback.
 
 ## Python Search Engine Library
 
-This Python library is a simple implementation of a search engine using the Google Search API. This library was developed by Koro_Is_Coding and is licensed under Apache v2.0.
+This Python library, developed by Koro_Is_Coding, allows users to build a custom search engine using the Google Search API. It is designed to be intuitive and easy to use, with a focus on flexibility and adaptability to a wide range of search tasks. This library is licensed under Apache v2.0.
 
 ### Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
 - You have a `Windows/Linux/Mac` machine running Python 3.6+.
-- You have installed the `requests`, and `scikit-learn` libraries.
+- You have installed the `requests`, `string`, `operator`, `sklearn`, and `nltk` libraries.
 
 ### Installation
 
 1. Clone this repository on your local machine:
 
 ```bash
-git clone https://github.com/KoroIsCoding/PyTorch-NLP-chatbot
+git clone https://github.com/KoroIs_Coding/Python-Search-Engine
 ```
 
 2. Navigate to the cloned repository:
 
 ```bash
-cd PyTorch-NLP-chatbot
+cd Python-Search-Engine
 ```
 
 3. Install the required dependencies:
 
 ```bash
-pip install requests scikit-learn
+pip install requests string operator sklearn nltk
 ```
 
-### Using the Search Engine Library
+### Using the Python Search Engine Library
 
 The `SearchEngineStruct` class is the main class for the search engine. It requires a Google API key and a Google Engine key for initialization. 
 
@@ -63,10 +62,13 @@ from search_engine import SearchEngineStruct
 search_engine = SearchEngineStruct(google_api_key='YOUR_API_KEY', google_engine_key='YOUR_ENGINE_KEY')
 
 # Define your query
-search_engine.query = 'Your search query'
+search_engine.set_query('Your search query')
 
-# Run the search engine (this is a simplified example, actual implementation may require more steps)
-search_engine.run()
+# Call Google Custom Search API
+search_engine.call_google_custom_search_api()
+
+# Get top results
+top_results = search_engine.get_top_result()
 ```
 
 Please replace `'YOUR_API_KEY'` and `'YOUR_ENGINE_KEY'` with your actual Google API key and Google Engine key respectively.
