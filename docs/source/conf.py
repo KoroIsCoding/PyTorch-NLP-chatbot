@@ -25,7 +25,7 @@ extensions = ['recommonmark', 'sphinx.ext.viewcode', 'sphinx.ext.autodoc']
 source_suffix = ['.rst', '.md']
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['build', 'Thumbs.db', '.DS_Store']
 
 master_doc = "index"
 
