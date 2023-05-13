@@ -3,6 +3,9 @@ NLP and its uses in creating an intelligent responsive chatbot to interact with 
 
 ![Apache Liscence](https://img.shields.io/github/license/KoroIsCoding/PyTorch-NLP-chatbot)![Issue](https://img.shields.io/github/issues/KoroIsCoding/PyTorch-NLP-chatbot)
 
+[![PyPI](https://img.shields.io/pypi/v/PyTorch-NLP-Chatbot)](https://pypi.org/project/Pytorch-nlp-Chatbot/)
+
+
 
 
 ## Overview
