@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functions &mdash; PyTorch-nlp-Chatbot 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="examples.html" />
+    <link rel="prev" title="chatbot package" href="chatbot.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PyTorch-nlp-Chatbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chatbot.html">chatbot package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#available">Available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-be-implemented">To Be Implemented</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">chatbot</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PyTorch-nlp-Chatbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Functions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/functions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h1>
+<section id="available">
+<h2>Available<a class="headerlink" href="#available" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>cal_tfidf(results) –&gt; Returns a dictionary with words as keys and their corresponding TF-IDF scores as values</p></li>
+<li><p>SearchEngineStruct.__init__(self, google_api_key=default, google_engine_key=default) –&gt; Initializes a SearchEngineStruct object with google API key, google engine key, top results list, relevant results list, irrelevant results list, and an empty query</p></li>
+<li><p>SearchEngineStruct.get_top_result(self) –&gt; Returns a list of top results</p></li>
+<li><p>SearchEngineStruct.set_query(self, seed_query) –&gt; Sets the search query</p></li>
+<li><p>SearchEngineStruct.get_query(self) –&gt; Returns the current search query</p></li>
+<li><p>SearchEngineStruct.call_google_custom_search_api(self) –&gt; Makes a call to Google’s custom search API and sets top results. Raises a SearchException if there are less than 10 results or if the response is None</p></li>
+<li><p>SearchEngineStruct.choose_relevant(self) –&gt; Iteratively displays each result to the user and asks if it is relevant or not. Splits the search results into two separate lists: relevant and irrelevant. Returns the percentage of relevant search results</p></li>
+<li><p>SearchEngineStruct.add_and_reorder_words(self) –&gt; Modifies the search query by adding the top two new words (according to their TF-IDF scores) that are unique to the relevant results and are different from the original query. It maintains the remaining words from the original query.</p></li>
+</ul>
+</section>
+<section id="to-be-implemented">
+<h2>To Be Implemented<a class="headerlink" href="#to-be-implemented" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>more NLP algorithm for query and document selection</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chatbot.html" class="btn btn-neutral float-left" title="chatbot package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Yiyang Hu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

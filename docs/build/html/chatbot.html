@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>chatbot package &mdash; PyTorch-nlp-Chatbot 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Functions" href="functions.html" />
+    <link rel="prev" title="PyTorch-NLP-Chantbot Documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            PyTorch-nlp-Chatbot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">chatbot package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-chatbot">chatbot Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chatbot.SearchEngineStruct"><code class="docutils literal notranslate"><span class="pre">SearchEngineStruct</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chatbot.SearchEngineStruct.add_and_reorder_words"><code class="docutils literal notranslate"><span class="pre">SearchEngineStruct.add_and_reorder_words()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chatbot.SearchEngineStruct.call_google_custom_search_api"><code class="docutils literal notranslate"><span class="pre">SearchEngineStruct.call_google_custom_search_api()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chatbot.SearchEngineStruct.choose_relevant"><code class="docutils literal notranslate"><span class="pre">SearchEngineStruct.choose_relevant()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chatbot.SearchEngineStruct.get_query"><code class="docutils literal notranslate"><span class="pre">SearchEngineStruct.get_query()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chatbot.SearchEngineStruct.get_top_result"><code class="docutils literal notranslate"><span class="pre">SearchEngineStruct.get_top_result()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chatbot.SearchEngineStruct.set_query"><code class="docutils literal notranslate"><span class="pre">SearchEngineStruct.set_query()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#chatbot.SearchException"><code class="docutils literal notranslate"><span class="pre">SearchException</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">chatbot</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">chatbot package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-chatbot">chatbot Module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chatbot.SearchEngineStruct"><code class="docutils literal notranslate"><span class="pre">SearchEngineStruct</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chatbot.SearchException"><code class="docutils literal notranslate"><span class="pre">SearchException</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PyTorch-nlp-Chatbot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">chatbot package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/chatbot.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chatbot-package">
+<h1>chatbot package<a class="headerlink" href="#chatbot-package" title="Permalink to this heading">¶</a></h1>
+<section id="module-chatbot">
+<span id="chatbot-module"></span><h2>chatbot Module<a class="headerlink" href="#module-chatbot" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="chatbot.SearchEngineStruct">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chatbot.</span></span><span class="sig-name descname"><span class="pre">SearchEngineStruct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">google_api_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'AIzaSyAGHYwrgMmAHlFwM-GmS2anQ7xWu7qcIjA'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">google_engine_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'7a8bd65adc0b760d8'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chatbot/models.html#SearchEngineStruct"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chatbot.SearchEngineStruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="chatbot.SearchEngineStruct.add_and_reorder_words">
+<span class="sig-name descname"><span class="pre">add_and_reorder_words</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chatbot/models.html#SearchEngineStruct.add_and_reorder_words"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chatbot.SearchEngineStruct.add_and_reorder_words" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the query based on the relevance feedback.</p>
+<p>This function calculates the TF-IDF scores for the words in the relevant and irrelevant results,
+finds the words that are unique to the relevant results, and adds the top two unique words to the query.
+This function has a side effect of updating the query attribute.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>None</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chatbot.SearchEngineStruct.call_google_custom_search_api">
+<span class="sig-name descname"><span class="pre">call_google_custom_search_api</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chatbot/models.html#SearchEngineStruct.call_google_custom_search_api"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chatbot.SearchEngineStruct.call_google_custom_search_api" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call the Google Custom Search API with the current query.</p>
+<p>This function updates the top_result attribute with the results returned by the API.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>None</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+<dt>Raises:</dt><dd><p>SearchException: If the API response is None, or if there are less than 10 items in the response.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chatbot.SearchEngineStruct.choose_relevant">
+<span class="sig-name descname"><span class="pre">choose_relevant</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chatbot/models.html#SearchEngineStruct.choose_relevant"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chatbot.SearchEngineStruct.choose_relevant" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes a list of search results and iteratively displays each result to the user
+and asks if it is relevant or not. The user input is used to split the search results into two
+separate lists: relevant and irrelevant.</p>
+<p>Args:
+- results (list of dict): a list of search results returned by the search engine. Each search</p>
+<blockquote>
+<div><p>result is a dictionary with the following keys: “link”, “title”, and “snippet”.</p>
+</div></blockquote>
+<p>Returns:
+- accuracy (float): the percentage of relevant search results out of the total number of</p>
+<blockquote>
+<div><p>search results (i.e., the number of search results in the input list).</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chatbot.SearchEngineStruct.get_query">
+<span class="sig-name descname"><span class="pre">get_query</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chatbot/models.html#SearchEngineStruct.get_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chatbot.SearchEngineStruct.get_query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current query of the SearchEngineStruct object.</p>
+<p>This function does not modify the state of the SearchEngineStruct object.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>None</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: The current query string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chatbot.SearchEngineStruct.get_top_result">
+<span class="sig-name descname"><span class="pre">get_top_result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/chatbot/models.html#SearchEngineStruct.get_top_result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chatbot.SearchEngineStruct.get_top_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the top search results.</p>
+<p>This function does not modify the state of the SearchEngineStruct object.</p>
+<p>Args:
+None</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list: A copy of the list of the top search results.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="chatbot.SearchEngineStruct.set_query">
+<span class="sig-name descname"><span class="pre">set_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed_query</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/chatbot/models.html#SearchEngineStruct.set_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chatbot.SearchEngineStruct.set_query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the query of the SearchEngineStruct object.</p>
+<p>This function modifies the state of the SearchEngineStruct object by updating the query.</p>
+<dl class="simple">
+<dt>rgs:</dt><dd><p>seed_query (str): The new query string.</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="chatbot.SearchException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chatbot.</span></span><span class="sig-name descname"><span class="pre">SearchException</span></span><a class="reference internal" href="_modules/chatbot/models.html#SearchException"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#chatbot.SearchException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Exception raised when there are not enough search results.</p>
+<p>This exception is typically raised when the number of items in a search response is less than 10.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>message – explanation of the error</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="PyTorch-NLP-Chantbot Documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="functions.html" class="btn btn-neutral float-right" title="Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Yiyang Hu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
