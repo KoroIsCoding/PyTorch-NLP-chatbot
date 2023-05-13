@@ -14,7 +14,7 @@ NLP and its uses in creating an intelligent responsive chatbot to interact with 
 [![Docs](https://github.com/KoroIsCoding/PyTorch-NLP-chatbot/actions/workflows/documentation.yaml/badge.svg)](https://koroiscoding.github.io/PyTorch-NLP-chatbot/)
 
 ## Overview
-`Python-Search-Engine` is a Python library designed to facilitate custom searches using the Google Search API. It features a user-friendly interface for querying, parsing, and analyzing search results. It also provides a mechanism to rank search results based on their relevance, calculated using TF-IDF scores.
+`Pytorch-NLP-Cahatbot` is a Python library designed to facilitate custom searches using the Google Search API. It features a user-friendly interface for querying, parsing, and analyzing search results. It also provides a mechanism to rank search results based on their relevance, calculated using TF-IDF scores.
 
 Users can tailor their search queries, evaluate the relevance of search results, and refine their queries based on relevance feedback.
 
