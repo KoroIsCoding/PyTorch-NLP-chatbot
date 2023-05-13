@@ -8,6 +8,9 @@ NLP and its uses in creating an intelligent responsive chatbot to interact with 
 [![PyPI](https://img.shields.io/pypi/v/PyTorch-NLP-Chatbot)](https://pypi.org/project/Pytorch-nlp-Chatbot/)
 
 
+[![codecov](https://codecov.io/gh/KoroIsCoding/PyTorch-NLP-chatbot/branch/main/graph/badge.svg?token=Y6UI9PLM4A)](https://codecov.io/gh/KoroIsCoding/PyTorch-NLP-chatbot)
+
+
 
 
 ## Overview
